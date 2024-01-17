@@ -1,0 +1,45 @@
+.search-bar input {
+    background-color: transparent;
+    border: transparent;
+    font-size: 0.9em;
+}
+
+.search-bar input:focus {
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.search-bar .form-control:focus {
+    border-color: white;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    color: white;
+}
+
+.navbar,
+.navbar-brand {
+    font-size: 1.5em;
+    padding-top: 0;
+}
+
+.dropdown-item {
+    font-size: 1.2em;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background: grey;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+a.bg-black:hover,
+a.bg-black:focus,
+button.bg-black:hover,
+button.bg-black:focus {
+    background-color: #1d2124 !important;
+}

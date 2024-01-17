@@ -1,0 +1,29 @@
+version: '3'
+services:
+  website:
+    build: .
+    restart: always
+    ports:
+      - 30020:80
+    environment:
+      - TZ=Pacific/Auckland
+      - PUID=1000
+      - PGID=1000
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+    volumes:
+      - ./Framework/:/var/www/html
+      - /mnt/hdd/:/var/www/html/Public/storage/
+  
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      - TZ=Pacific/Auckland
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=db
+      - MYSQL_ROOT_PASSWORD=password
