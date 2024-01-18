@@ -25,6 +25,7 @@ $App->post('/api/users/{id}', 'App\Controllers\API\Users\post', 5);
 $App->get('/api/models', 'App\Controllers\API\Models\get', 1);
 $App->post('/api/models/upload', 'App\Controllers\API\Models\upload', 1);
 $App->delete('/api/models/{model_name}', 'App\Controllers\API\Models\delete', 1);
+$App->get('/api/printer/status', 'App\Controllers\API\Printer\status', 1);
 
 
 ## USERS ##

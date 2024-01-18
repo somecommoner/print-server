@@ -1,6 +1,6 @@
 <?php
 
-$_settings['TITLE'] = 'Printer';
+$_settings['TITLE'] = 'UP3D';
 $_settings['URL'] = 'printer.jeffey.nz';
 
 #$_settings['MAIL'] = 'local';

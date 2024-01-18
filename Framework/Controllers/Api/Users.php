@@ -99,7 +99,17 @@ function SelectUsers($id=false) {
   foreach ($results as $result) {
     $user = [];
     foreach ($result as $key => $value) {
-      if ($key == "invited_by_id") {
+
+      if ($key == "acct_created") {
+
+        $user['acct_created'] = substr($value, 0, -7);
+
+      } else if ($key == "last_login") {
+
+        $user['last_login'] = substr($value, 0, -7);
+
+      } else if ($key == "invited_by_id") {
+        
         $query = (new \App\SQL)->Query("SELECT username FROM users WHERE user_id=?", [$value]);
         if ($query !== false)
           $user['invited_by_user'] = $query[0]['username'];

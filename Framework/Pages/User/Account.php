@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div id="collapseUsername" class="collapse show" aria-labelledby="username" data-parent="#accordian">
-                <div class="card-body text-white col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="card-body p-4 text-white col-12 col-md-6 col-lg-5 col-xl-4">
                     <form id="username" class="pb-2">
                         <div>
                             <label for="username" class="text-light">
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div id="collapsePassword" class="collapse" aria-labelledby="password" data-parent="#accordian">
-                <div class="card-body text-white col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="card-body p-4 text-white col-12 col-md-6 col-lg-5 col-xl-4">
                     <p>Password must be at least 8 characters and contain uppercase, lowercase and numbers.</p>
                     <form id="password" class="pb-2">
                         <div class="pb-3">
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div id="collapseEmail" class="collapse" aria-labelledby="email" data-parent="#accordian">
-                <div class="card-body text-white col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="card-body p-4 text-white col-12 col-md-6 col-lg-5 col-xl-4">
                     <p>An email will be sent to the new email address with a validation link.</p>
                     <form id="email" class="pb-2">
                         <div>
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div id="collapseLogonSettings" class="collapse" aria-labelledby="logonSettings" data-parent="#accordian">
-                <div class="card-body text-white col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="card-body p-4 text-white col-12 col-md-6 col-lg-5 col-xl-4">
                     <p>Auto logon for your IP address?.</p>
                     <form id="logonSettings" class="pb-2">
                         <div>

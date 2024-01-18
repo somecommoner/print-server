@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
   gnupg \
   unzip \
   git \
-  sudo
+  sudo \
+  wget
 
 RUN docker-php-ext-install pdo_mysql && \
   a2enmod rewrite

@@ -2,6 +2,7 @@
 
 <head>
   <?php require_once __DIR__ . '/Sections/Header.php'; ?>
+  <script type="text/javascript" src="/js/home.js"></script>
 </head>
 
 <body class="bg-black ">
@@ -10,8 +11,34 @@
     <div class="row pt-0 p-2">
       <div class="col-4 p-2">
         <div class="bg-black border border-white text-white rounded">
-          <div class="p-4">
-          <h2>Settings</h2>
+          <div class="p-3 px-4">
+            <h4>Printer</h4>
+          </div>
+          
+
+          <div class="p-0 px-4">Modifiers</div>
+          <div class="px-3 pt-0 pb-3">
+            <div class="bg-black border border-white text-white rounded w100 p-2">
+              <div class="row px-3">
+                <small class="p-1 px-2 col-4">Acceleration: </small>
+                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
+                <small class="col-1">20%</small>
+              </div>
+              <div class="row px-3">
+                <small class="p-1 px-2 col-4">V Max: </small>
+                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
+                <small class="col-1">150</small>
+              </div>
+              <div class="row px-3">
+                <small class="p-1 px-2 col-4">Junction Deviation: </small>
+                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
+                <small class="col-1">0.05</small>
+              </div>
+              <div class="row px-3 p-3">
+                <div class="p-1 px-2 col-4 align-middle">Nozzle Height: </div>
+                <input type="number" step=".01" class="form-control form-control-sm col-4" placeholder="200" id="nozzleHeightVal">
+              </div>
+            </div>
           </div>
 
           <div class="p-0 px-4">Print</div>
@@ -38,60 +65,41 @@
             <div class="bg-black border border-white text-white rounded w100 p-2">
               <div class="row px-3 p-3">
                 <div class="row col-6">
-                  <small class="col-8">Current Task: </small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">Machine: </small>
+                  <small id="status-machine-value" class="col-6">-</small>
                 </div>
                 <div class="row col-6">
-                  <small class="col-8">Current Layer: </small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">Program: </small>
+                  <small id="status-program-value" class="col-6">-</small>
                 </div>
                 <div class="row col-6">
-                  <small class="col-8">Current Height: </small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">System: </small>
+                  <small id="status-system-value" class="col-6">-</small>
                 </div>
                 <div class="row col-6">
-                  <small class="col-8">Time Remaining: </small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">Layer: </small>
+                  <small id="status-layer-value" class="col-6">-</small>
                 </div>
                 <div class="row col-6">
-                  <small class="col-8">Nozzle Temp: </small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">Nozzle Temp: </small>
+                  <small id="status-temp-value" class="col-6">-</small>
                 </div>
                 <div class="row col-6">
-                  <small class="col-8">Nozzle Height:</small>
-                  <small class="col-4">-</small>
+                  <small class="col-6">Nozzle Height: </small>
+                  <small id="status-height-value" class="col-6">-</small>
                 </div>
-                
+                <div class="row col-6">
+                  <small class="col-6">Percent:</small>
+                  <small id="status-percent-value" class="col-6">-</small>
+                </div>
+                <div class="row col-6">
+                  <small class="col-6">Time:</small>
+                  <small id="status-time-value" class="col-6">-</small>
+                </div>
                 <div class="col-12 p-2 pt-3 pb-0">
-                <button type="button" class="btn btn-danger">Stop Printer</button>
+                  <button type="button" class="btn btn-danger">Stop Printer</button>
                 </div>
 
-              </div>
-            </div>
-          </div>
-
-
-          <div class="p-0 px-4">Modifiers</div>
-          <div class="px-3 pt-0 pb-3">
-            <div class="bg-black border border-white text-white rounded w100 p-2">
-              <div class="row px-3">
-                <small class="p-1 px-2 col-4">Acceleration: </small>
-                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
-                <small class="col-1">20%</small>
-              </div>
-              <div class="row px-3">
-                <small class="p-1 px-2 col-4">V Max: </small>
-                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
-                <small class="col-1">150</small>
-              </div>
-              <div class="row px-3">
-                <small class="p-1 px-2 col-4">Junction Deviation: </small>
-                <input type="range" class="form-range col-7" min="0" max="5" step="0.5" id="customRange3">
-                <small class="col-1">0.05</small>
-              </div>
-              <div class="row px-3 p-3">
-                <div class="p-1 px-2 col-3 align-middle">Nozzle Height: </div>
-                <input type="number" step=".01" class="form-control form-control-sm col-4" placeholder="200" id="nozzleHeightVal">
               </div>
             </div>
           </div>
