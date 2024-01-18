@@ -7,7 +7,7 @@
 <body class="bg-black ">
   <?php require_once __DIR__ . '/Sections/Nav.php'; ?>
   <div id="content" class="container-fluid w100">
-    <div class="row pt-0">
+    <div class="row pt-0 p-2">
       <div class="col-4 p-2">
         <div class="bg-black border border-white text-white rounded">
           <div class="p-4">
@@ -18,14 +18,13 @@
           <div class="px-3 pt-0 pb-3">
             <div class="bg-black border border-white text-white rounded w100 p-2">
               <div class="p-3">
-                <div class="">Model: </button>
+                <small class="">Model:</small>
                   <select class="form-select form-select-sm" aria-label="Default select example">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <?php foreach (\App\Controllers\API\Models\getFiles() as $file) {
+                       echo '<option value="'.$file['model_name'].'">'.$file['model_name'].'</option>';
+                    }?>
                   </select>
                 </div>
-              </div>
               <div class="row px-4">
                 <div class="col-3 p-1 pb-3">
                   <button type="button" class="btn btn-success">Start Print</button>
@@ -34,7 +33,7 @@
             </div>
           </div>
 
-          <div class="p-0 px-4">Print Status</div>
+          <div class="p-0 px-4">Status</div>
           <div class="px-3 pt-0 pb-3">
             <div class="bg-black border border-white text-white rounded w100 p-2">
               <div class="row px-3 p-3">
@@ -72,7 +71,7 @@
           </div>
 
 
-          <div class="p-0 px-4">Print Modifiers</div>
+          <div class="p-0 px-4">Modifiers</div>
           <div class="px-3 pt-0 pb-3">
             <div class="bg-black border border-white text-white rounded w100 p-2">
               <div class="row px-3">
@@ -114,8 +113,6 @@
               </div>
             </div>
           </div>
-
-
 
         </div>
       </div>

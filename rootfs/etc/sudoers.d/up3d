@@ -1,0 +1,9 @@
+# allow www-data to run up3d commadns
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dcapture
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dconvg
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dgcode
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dinfo
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dload
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dshell
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dstatus
+www-data ALL=(ALL) NOPASSWD: /sbin/up3dtranscode

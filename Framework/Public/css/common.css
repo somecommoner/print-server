@@ -43,3 +43,8 @@ button.bg-black:hover,
 button.bg-black:focus {
     background-color: #1d2124 !important;
 }
+
+.align-list {
+    display: flex;
+    justify-content: space-between;
+}
