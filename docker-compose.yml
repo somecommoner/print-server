@@ -12,6 +12,7 @@ services:
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=admin
     volumes:
+      - /dev/bus/usb:/dev/bus/usb
       - ./Framework/:/var/www/html
       - /mnt/hdd/:/var/www/html/Public/storage/
   
