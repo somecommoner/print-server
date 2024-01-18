@@ -45,19 +45,19 @@ function upload($vars) {
     
     $dir = __DIR__."/../../Private/Models/";
     $dest = $dir.".temp/".$name;
-    move_uploaded_file($_FILES['model_file']['tmp_name'], $dest);
+    move_uploaded_file($_FILES['model_file']['tmp_name'], $dir.$_FILES['model_file']['name']);
 
 
-    exec('up3dtranscode box '.$dest.' '.$dir.$new_name."umc".' 223 20 150 0.05', $output, $retval);
+    // exec('up3dtranscode box '.$dest.' '.$dir.$new_name."umc".' 223 20 150 0.05', $output, $retval);
 
-    unlink($dest);
+    // unlink($dest);
 
-    foreach ($output as $line) {
-        if (str_contains(strtolower($line), "error")) {
-            unlink($dir.$new_name."umc");
-            \App\Response::Error($line);
-        }
-    }
+    // foreach ($output as $line) {
+    //     if (str_contains(strtolower($line), "error")) {
+    //         unlink($dir.$new_name."umc");
+    //         \App\Response::Error($line);
+    //     }
+    // }
     
     \App\Redirect("/models");
 

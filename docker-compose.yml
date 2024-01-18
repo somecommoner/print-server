@@ -16,7 +16,7 @@ services:
       - /mnt/hdd/:/var/www/html/Public/storage/
   
   db:
-    image: mysql
+    image: mariadb
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     ports:
