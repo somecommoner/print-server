@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
   unzip \
   git \
   sudo \
-  wget
+  ffmpeg
 
 RUN docker-php-ext-install pdo_mysql && \
   a2enmod rewrite

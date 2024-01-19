@@ -20,6 +20,8 @@ rm -r /tmp/tiata
 groupmod -g $PGID www-data && \
 usermod -u $PUID -g $PGID www-data && \
 
+usermod -aG video www-data
+
 chown -R www-data:www-data /var/www/html
 
 # replace the current pid 1 with original entrypoint
